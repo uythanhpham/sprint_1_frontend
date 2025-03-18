@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test Frontend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        input, select, button, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        #response {
+            white-space: pre-wrap;
+            background: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Frontend Test API</h2>
+        
+        <label>API Key:</label>
+        <input type="text" id="api-key" placeholder="Nhập API Key">
+
+        <label>API URL:</label>
+        <input type="text" id="api-url" placeholder="Nhập URL API">
+
+        <label>Chọn phương thức:</label>
+        <select id="method">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+        </select>
+
+        <div id="json-body-section" style="display: none;">
+            <label>Body (JSON):</label>
+            <textarea id="body" rows="4" placeholder='{"key": "value"}'></textarea>
+        </div>
+
+        <div id="file-upload-section" style="display: none;">
+            <label>Upload File (Chỉ dành cho POST/PUT):</label>
+            <input type="file" id="file-input">
+        </div>
+
+        <button onclick="sendRequest()">Gửi Request</button>
+        <h3>Kết quả:</h3>
+        <div id="response"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- 
+git init
+
+git add .
+
+git commit -m"upload source code"
+
+git remote add origin https://github.com/uythanhpham/frontend_sprint_1.git
+
+git push
+-->
